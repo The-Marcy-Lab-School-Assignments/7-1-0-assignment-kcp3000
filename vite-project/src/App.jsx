@@ -14,6 +14,8 @@ const App = () => {
     setFilteredPokemon(allPokemon)
   }, [allPokemon])
 
+  console.log(filteredPokemon)
+
   return (
     <div className="App ui container">
       <h1>Pokedex</h1>

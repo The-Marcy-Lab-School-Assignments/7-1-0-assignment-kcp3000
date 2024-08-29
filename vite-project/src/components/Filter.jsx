@@ -13,6 +13,7 @@ const Filter = ({ names, setNames }) => {
 
     console.log(valueName)
     //idk i feel like im rightt there but something is not working 
+    //nvm i got it lol
     return (
         <div className="ui search">
             <div className="ui icon input">

@@ -43,7 +43,7 @@ const PokemonProvider = ({ children }) => {
     }, [])
 
     // TODO: Add values to be included in the context here
-    let contextValues = { allPokemon, setAllPokemon, error, setError }
+    let contextValues = { allPokemon, setAllPokemon, error }
 
     // TODO: Wrap the {children} in the PokemonContext.Provider and provide the values above
     return (

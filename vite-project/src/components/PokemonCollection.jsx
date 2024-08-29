@@ -7,11 +7,11 @@ import { useContext } from 'react';
 const PokemonCollection = ({ pokemonList }) => {
 
     // TODO: Replace this to get the pokemon from PokemonContext
-    const { allPokemon } = useContext(PokemonContext)
+    // const { allPokemon } = useContext(PokemonContext)
 
     return (
         <div className="ui six cards">
-            {allPokemon?.map(pokemon => <PokemonCard key={pokemon.id} pokemon={pokemon} />)}
+            {pokemonList?.map(pokemon => <PokemonCard key={pokemon.id} pokemon={pokemon} />)}
         </div>
     )
 }
