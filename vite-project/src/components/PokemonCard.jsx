@@ -1,13 +1,20 @@
+import { useState } from "react"
+
 // TODO: This component should render a single pokemon's stats and image.
 const PokemonCard = ({ pokemon }) => {
 
     const { name, hp, front, back } = pokemon
+    const [clicked, setClicked] = useState(false)
+
+    const clicking = () => {
+        setClicked(!clicked)
+    }
 
     return (
-        <div className="ui card">
+        <div className="ui card" onClick={clicking}>
             <div>
                 <div className="image">
-                    <img alt={name} src={front} />
+                    <img alt={name} src={clicked ? back : front} />
                 </div>
                 <div className="content">
                     <div className="header">{name}</div>
@@ -19,7 +26,7 @@ const PokemonCard = ({ pokemon }) => {
                     </span>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 
